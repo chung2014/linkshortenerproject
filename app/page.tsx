@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-linear-to-b from-zinc-50 via-white to-zinc-100">
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
-        <p className="text-lg font-semibold tracking-tight">LinkShortenerProject</p>
+        <p className="text-lg font-semibold tracking-tight">
+          LinkShortenerProject
+        </p>
         <div className="flex items-center gap-2">
           <Show when="signed-out">
             <SignInButton mode="modal">
@@ -30,7 +32,8 @@ export default function Home() {
           Ship secure links with account-backed access
         </h1>
         <p className="max-w-xl text-base leading-7 text-zinc-600 sm:text-lg">
-          Create an account to manage short links, track usage, and protect routes with Clerk.
+          Create an account to manage short links, track usage, and protect
+          routes with Clerk.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Show when="signed-out">
