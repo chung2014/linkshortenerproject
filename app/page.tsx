@@ -1,8 +1,16 @@
 import { SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 
-export default function Home() {
+export default async function Home() {
+  const { userId } = await auth();
+
+  if (userId) {
+    redirect("/dashboard");
+  }
+
   return (
     <div className="flex min-h-screen flex-col bg-linear-to-b from-zinc-50 via-white to-zinc-100">
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
@@ -11,15 +19,15 @@ export default function Home() {
         </p>
         <div className="flex items-center gap-2">
           <Show when="signed-out">
-            <SignInButton mode="modal">
+            <SignInButton mode="modal" fallbackRedirectUrl="/dashboard">
               <Button variant="outline">Sign in</Button>
             </SignInButton>
-            <SignUpButton mode="modal">
+            <SignUpButton mode="modal" fallbackRedirectUrl="/dashboard">
               <Button>Sign up</Button>
             </SignUpButton>
           </Show>
           <Show when="signed-in">
-            <UserButton afterSignOutUrl="/" />
+            <UserButton />
           </Show>
         </div>
       </header>
@@ -37,10 +45,10 @@ export default function Home() {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Show when="signed-out">
-            <SignUpButton mode="modal">
+            <SignUpButton mode="modal" fallbackRedirectUrl="/dashboard">
               <Button size="lg">Create your account</Button>
             </SignUpButton>
-            <SignInButton mode="modal">
+            <SignInButton mode="modal" fallbackRedirectUrl="/dashboard">
               <Button size="lg" variant="secondary">
                 I already have an account
               </Button>

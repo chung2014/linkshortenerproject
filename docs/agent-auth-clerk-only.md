@@ -8,6 +8,7 @@ This app uses Clerk for all authentication and authorization.
 - Keep `/dashboard` protected. Unauthenticated users must not be able to access this route.
 - Redirect authenticated users away from `/` to `/dashboard`.
 - Sign-in and sign-up must always open as Clerk modals.
+- Any unauthenticated visit, please redirect to the homepage, i.e `/`
 
 ## Implementation Guidance
 
