@@ -10,7 +10,7 @@ export default async function DashboardPage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-linear-to-b from-zinc-50 via-white to-zinc-100">
+    <div className="flex min-h-screen flex-col bg-linear-to-b from-background via-background to-muted/30">
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
         <p className="text-lg font-semibold tracking-tight">
           LinkShortenerProject
@@ -19,8 +19,8 @@ export default async function DashboardPage() {
       </header>
 
       <main className="mx-auto flex w-full max-w-6xl flex-1 items-center px-6 py-16">
-        <h1 className="text-3xl font-semibold tracking-tight text-zinc-950 sm:text-4xl">
-          Dashbaord
+        <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+          Dashboard
         </h1>
       </main>
     </div>

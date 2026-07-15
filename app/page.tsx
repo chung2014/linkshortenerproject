@@ -12,7 +12,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-linear-to-b from-zinc-50 via-white to-zinc-100">
+    <div className="flex min-h-screen flex-col bg-linear-to-b from-background via-background to-muted/30">
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
         <p className="text-lg font-semibold tracking-tight">
           LinkShortenerProject
@@ -33,13 +33,13 @@ export default async function Home() {
       </header>
 
       <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center gap-8 px-6 py-16 text-center">
-        <span className="rounded-full border border-zinc-200 bg-white px-4 py-1 text-sm text-zinc-600 shadow-sm">
+        <span className="rounded-full border border-border bg-card px-4 py-1 text-sm text-muted-foreground shadow-sm">
           Clerk authentication is ready
         </span>
-        <h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl">
+        <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
           Ship secure links with account-backed access
         </h1>
-        <p className="max-w-xl text-base leading-7 text-zinc-600 sm:text-lg">
+        <p className="max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
           Create an account to manage short links, track usage, and protect
           routes with Clerk.
         </p>
@@ -55,7 +55,7 @@ export default async function Home() {
             </SignInButton>
           </Show>
           <Show when="signed-in">
-            <p className="rounded-lg border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-700 shadow-sm">
+            <p className="rounded-lg border border-border bg-card px-4 py-2 text-sm text-muted-foreground shadow-sm">
               You are signed in. Use the profile button in the top right.
             </p>
           </Show>
