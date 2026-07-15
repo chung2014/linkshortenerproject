@@ -13,6 +13,7 @@ This file is the entrypoint for LLM coding instructions in this repository.
 ## Read order
 
 - `docs/agent-auth-clerk-only.md` (Clerk-only authentication and route access policy)
+- `docs/agent-ui-shadcn-only.md` (UI component policy: shadcn UI only, no custom components)
 
 ## Rule precedence
 
