@@ -12,6 +12,8 @@ This file is the entrypoint for LLM coding instructions in this repository.
 
 ## Read order
 
+- `docs/agent-auth-clerk-only.md` (Clerk-only authentication and route access policy)
+
 ## Rule precedence
 
 1. Direct user request
