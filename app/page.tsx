@@ -46,7 +46,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-linear-to-b from-background via-background to-muted/30">
+    <div className="flex min-h-screen flex-col bg-gradient-to-b from-background via-background to-muted/30">
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
         <div>
           <p className="text-lg font-semibold tracking-tight">LinkShortenerProject</p>
